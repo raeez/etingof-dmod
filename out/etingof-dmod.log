@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 NOV 2017 07:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 NOV 2017 08:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,7 +956,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 
 ]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 36.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 40.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ufplmbb.fd
@@ -1016,24 +1016,91 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 
 
 ]
-(./sections/lec13.tex) [32] [33
+(./sections/lec13.tex
+Underfull \hbox (badness 1286) in paragraph at lines 25--26
+\OT1/ppl/m/it/12 sending quasi-isomorphisms to iso-mor-phisms fac-tors through
+ []
 
+<graphics/lec13-motiv.png, id=112, 270.00874pt x 130.4875pt>
+File: graphics/lec13-motiv.png Graphic file (type png)
 
-] (./sections/lec14.tex) [34] [35
+<use graphics/lec13-motiv.png>
+Package pdftex.def Info: graphics/lec13-motiv.png used on input line 42.
+(pdftex.def)             Requested size: 135.00403pt x 65.24358pt.
+ [32]
+<graphics/lec13-cone.png, id=120, 318.18875pt x 294.09875pt>
+File: graphics/lec13-cone.png Graphic file (type png)
+
+<use graphics/lec13-cone.png>
+Package pdftex.def Info: graphics/lec13-cone.png used on input line 76.
+(pdftex.def)             Requested size: 159.09398pt x 147.04901pt.
+ [33 <./graphics/lec13-motiv.png>]
+<graphics/lec13-cyl.png, id=125, 348.30125pt x 223.83624pt>
+File: graphics/lec13-cyl.png Graphic file (type png)
+
+<use graphics/lec13-cyl.png>
+Package pdftex.def Info: graphics/lec13-cyl.png used on input line 97.
+(pdftex.def)             Requested size: 174.15019pt x 111.91785pt.
+ [34 <./graphics/lec13-cone.png>] [35 <./graphics/lec13-cyl.png>] <graphics/lec
+13-comm1.png, id=134, 223.83624pt x 179.67125pt>
+File: graphics/lec13-comm1.png Graphic file (type png)
+
+<use graphics/lec13-comm1.png>
+Package pdftex.def Info: graphics/lec13-comm1.png used on input line 159.
+(pdftex.def)             Requested size: 111.91785pt x 89.83539pt.
+
+<graphics/lec13-comm2.png, id=135, 240.9pt x 191.71625pt>
+File: graphics/lec13-comm2.png Graphic file (type png)
+
+<use graphics/lec13-comm2.png>
+Package pdftex.def Info: graphics/lec13-comm2.png used on input line 160.
+(pdftex.def)             Requested size: 120.44969pt x 95.85788pt.
+ [36 <./graphics/lec13-comm1.png> <./graphics/lec13-comm2.png>] <graphics/lec13
+-roofs.png, id=141, 766.865pt x 226.8475pt>
+File: graphics/lec13-roofs.png Graphic file (type png)
+
+<use graphics/lec13-roofs.png>
+Package pdftex.def Info: graphics/lec13-roofs.png used on input line 170.
+(pdftex.def)             Requested size: 383.43156pt x 113.42346pt.
+
+Overfull \hbox (23.43156pt too wide) in paragraph at lines 170--170
+ [][] 
+ []
+
+<graphics/lec13-two-diagrams.png, id=142, 480.79625pt x 159.59625pt>
+File: graphics/lec13-two-diagrams.png Graphic file (type png)
+
+<use graphics/lec13-two-diagrams.png>
+Package pdftex.def Info: graphics/lec13-two-diagrams.png used on input line 173
+.
+(pdftex.def)             Requested size: 240.39752pt x 79.79791pt.
+
+<graphics/lec13-equiv.png, id=143, 270.00874pt x 229.85875pt>
+File: graphics/lec13-equiv.png Graphic file (type png)
+
+<use graphics/lec13-equiv.png>
+Package pdftex.def Info: graphics/lec13-equiv.png used on input line 177.
+(pdftex.def)             Requested size: 135.00403pt x 114.92908pt.
+ [37 <./graphics/lec13-roofs.png> <./graphics/lec13-two-diagrams.png> <./graphi
+cs/lec13-equiv.png>]) [38] [39
 
 
 ]
-(./sections/lec15.tex) [36] [37
+(./sections/lec14.tex) [40] [41
 
 
-] (./sections/lec16.tex) [38] [39
+] (./sections/lec15.tex) [42] [43
 
 
 ]
-(./sections/lec17.tex) [40] [41
+(./sections/lec16.tex) [44] [45
 
 
-] (./sections/lec18.tex [42]
+] (./sections/lec17.tex) [46] [47
+
+
+]
+(./sections/lec18.tex [48]
 Overfull \hbox (14.06114pt too wide) detected at line 72
 []\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 j[]\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 ^^
 Y[][]\OT1/zplm/m/n/12 ) \OMS/zplm/m/n/12 ! \OML/zplm/m/it/12 j[]\OT1/zplm/m/n/1
@@ -1046,18 +1113,18 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 74.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 74.
-[43] [44]) [45] [46
+[49] [50]) [51] [52
 
 
-] [47] (./sections/lec19.tex) [48] [49
+] [53] (./sections/lec19.tex) [54] [55
 
 
 ]
 (./sections/lec20.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 36.
- [50]
-<graphics/4g-gon.png, id=177, 229.85875pt x 199.74625pt>
+ [56]
+<graphics/4g-gon.png, id=215, 229.85875pt x 199.74625pt>
 File: graphics/4g-gon.png Graphic file (type png)
 
 <use graphics/4g-gon.png>
@@ -1076,22 +1143,22 @@ Overfull \hbox (108.46294pt too wide) in paragraph at lines 66--74
 
 
 Underfull \hbox (badness 7186) in paragraph at lines 84--89
- \OT1/ppl/b/n/12 23.1.Constructible sheaves and com-plexes.[] \OT1/ppl/m/n/12 L
+ \OT1/ppl/b/n/12 26.1.Constructible sheaves and com-plexes.[] \OT1/ppl/m/n/12 L
 et $\OML/zplm/m/it/12 X$ \OT1/ppl/m/n/12 be a
  []
 
-[51 <./graphics/4g-gon.png>] [52]
+[57 <./graphics/4g-gon.png>] [58]
 Underfull \hbox (badness 3250) in paragraph at lines 157--159
 []\OT1/ppl/m/n/12 Here is the main the-o-rem about the con-nec-tion be-tween
  []
 
-) [53] (out/etingof-dmod.aux) ) 
+) [59] (out/etingof-dmod.aux) ) 
 Here is how much of TeX's memory you used:
- 19585 strings out of 493014
- 391959 string characters out of 6133351
- 413621 words of memory out of 5000000
- 22373 multiletter control sequences out of 15000+600000
- 52638 words of font info for 153 fonts, out of 8000000 for 9000
+ 19652 strings out of 493014
+ 393340 string characters out of 6133351
+ 413756 words of memory out of 5000000
+ 22424 multiletter control sequences out of 15000+600000
+ 56628 words of font info for 167 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  76i,19n,84p,853b,982s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dv
@@ -1099,20 +1166,21 @@ ips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/inconsolata
 /i4-ot1-0.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/inconsolat
 a/Inconsolata-zi4r.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/euler/eufm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mat
-hpazo/fplmbb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpaz
-o/fplmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fpl
-mri.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplb8a
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on out/etingof-dmod.pdf (53 pages, 262763 bytes).
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/euler/eufm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/math
+pazo/fplmbb.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo
+/fplmr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathpazo/fplm
+ri.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplb8a.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on out/etingof-dmod.pdf (59 pages, 1275633 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

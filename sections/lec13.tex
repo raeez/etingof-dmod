@@ -1,4 +1,188 @@
 \documentclass[etingof-dmod.tex]{subfiles}
 \begin{document}
-\section{section Plan}
+\rc\A{\mc{A}}
+
+\section{Derived Categories}
+Let $\A$ be an abelian category, and $\mc{C}(\A)$ be the category of all
+complexes over $\A$. Let $\mc{C}^+(\A)$ be the category of complexes $K$ with
+$K^i = 0$ for $i << 0$, and analogously let $\mc{C}^-(\A)$ be the category of
+complexes with $K^i = 0$ for $i >>0$. Let $\mc{C}^b(\A)$ be the intersection of
+these two categories; i.e.\ the category of bounded complexes. Let
+$\mc{C}_0(\A)$ be the category of complexes with zero differential; we have a
+functor of cohomology $$H : \mc{C}(\A) \rightarrow \mc{C}_0(\A) =
+\bigoplus_{i\in\Z} \A$$ which attaches to every complex its cohomology.
+
+Recall that $f : \mc{C} \rightarrow \mc{D}$ is a quasi-isomorphism if $$H(f):
+H(\mc{C}) \rightarrow H(\mc{D})$$ is an isomorphism.
+
+\begin{thm}
+  There exists a unique (up to canonical equivalence) category $\D(\A)$,
+  called the \textit{derived category}, together with a functor $$Q: \mc{C}(\A)
+  \rightarrow \D(\A)$$ such that \begin{itemize}
+    \item For $f : K^* \rightarrow L^*$ a quasi-isomorphism, $Q(f)$ is an
+      isomorphism.
+    \item The pair $(\D,Q)$ is universal for this property, i.e.\ any
+      functor $$F: \mc{C}(\A) \rightarrow \D'$$ sending quasi-isomorphisms to
+      isomorphisms factors through $\D(\A)$ i.e.\ there exists $$G: \D(\A) \rightarrow
+      \D'$$ satisfying $$F = G\circ Q$$.
+  \end{itemize}
+  The objects of $\D(\A)$ are the objects of $\mc{C}(\A)$.
+\end{thm}
+\begin{rmk}
+  More generally, if $\mc{C}$ is any category, and $\mc{S}$ is any class of
+  morphisms, we can define the category $\mc{C}[\mc{S}^{-1}]$ and a functor
+  $$\mc{C} \rightarrow \mc{C}[\mc{S}^{-1}]$$ which satisfy both conditions
+  outlined in the theorem above. In our case $\D(\A) =
+  \mc{C}(\A)[\mc{S}^{-1}]$ where $\mc{S}$ is the class of quasi-isomorphisms.
+\end{rmk}
+\section{Motivation}
+Suppose $\A = A-\Mod$, then any $M \in \A$ has a projective resolution, and any
+two resolutions are homotopy equivalent: there is a pair of morphisms
+
+\image{lec13-motiv.png}
+
+such that $f \circ g$ and $g \circ f$ are homotopic to the identity, i.e.\
+$$f\circ g - 1 = h d + d h $$ etc.\
+We want all these resolutinos to be one object, defined canonically. In
+particular, we want this to be the case for $M = 0$, i.e.\ we want any exact
+complex of projectives to be zero.
+
+\subsection{Structure of derived categories}
+\begin{itemize}
+  \item Shift functor: $K^* \rightarrow K^*[i]$, $K[i]^j = K^{j+i}$.
+  \item Distinguished triangles.
+\end{itemize}
+
+For a left exact functor $F: \A \rightarrow
+    \mc{B}$ we'll define $$\R F : \D(\A) \rightarrow \D(\mc{B})$$ and similarly
+    for a right exact functor $G: \A \rightarrow \mc{B}$ we'll define $$\L G:
+    \D(\A) \rightarrow \D(\mc{B}).$$ We will want to say that it is exact, so
+    we'll need an analogue of short exact sequences in the usual
+    sense\footnotemark\footnotetext{Since
+    the category $\D(\A)$ is not abelian, and we don't have the notion of kernel
+  and cokernel of morphisms, so we have to replace these notions with something
+else.}We define the notion of the \textit{cone of a morphism of complexes}: let
+$f: K^* \rightarrow L^*$ be a morphism of complexes; we define the complex
+$C(f)^*$ called the \textit{cone} of $f$, as follows: $$C(f)^* = K^*[1]\oplus
+L^*$$ i.e.\ $$C(f)^i = K^{i+1} \oplus L^i$$ with differential $$d(k^{i+1}, l^i)
+= (-d_K k^{i+1}, f(k^{i+1} + d_L l^i)$$
+
+  \begin{rmk}
+    Suppose that $K^*$ and $L^*$ come from actual simplicial complexes,
+    %(as complexes comute reduced cohomology
+    and we are given  a simplicial map $K^* \rightarrow L^*$, then we can
+    consider the $L^*$ space obtained by gluing a cone over $K$ to $L$ along the
+    map $f$
+    \image{lec13-cone.png}
+    Then teh complex $C^*(f)$ computes the (reduced) homology of this space, and
+    so the cohomology of $C^*(f)$ is the reduced homology of the space obtained
+    by contracting the image of $f$ to a point (if $f$ is an inclusion).
+  \end{rmk}
+
+  \begin{exc}
+    Show that if $f$ is an embedding $C^*(f)$ is isomorphic to $L^* / {K^*}$.
+  \end{exc}
+
+  \begin{lem}
+    The sequence $$\cdots \rightarrow H^i(K) \rightarrow H^i(L) \rightarrow
+    H^i(C(f)) \rightarrow H^{i+1}(K) \rightarrow \cdots$$ is exact (where the
+      connecting map correspondings to the projection $C(f) \rightarrow K[1]$
+  \end{lem}
+  \begin{proof}
+    If $f: K^* \rightinclusion L^*$, then $C(f) \simeq L^* / {K^*}$
+    (quasi-isomorphism), so this is the well-known long exact sequence. More
+    generally, we define the \textit{cylinder} of $f$: $$\Cyl(f) = K^* \oplus
+    K^*[1] \oplus L^*$$ with $$d(k^i, k^{i+1}, l^i) = (d_K k^i - k^{i+1},
+      -d_Kk^{i+1}, f(k^{i+1} - d_L l^i)$$
+      \image{lec13-cyl.png}
+      The natural inclusion $$L^* \rightinclusion \Cyl(f)$$ is a
+      quasi-isomorphism, and the sequence $$K^* \rightarrow \Cyl(f) \rightarrow
+      C(f)$$ is an exact sequence of complexes, as desired.
+  \end{proof}
+
+  \begin{defn}
+    A \textit{distinguished triangle} in $\D(\A)$ is a triangle $$X \rightarrow
+    Y \rightarrow Z \rightarrow X[1]$$ which is the image under $Q$ of
+    $$K^* \rightarrow L^* \rightarrow C(f) \rightarrow K[1]$$
+  \end{defn}
+
+\section{Main problem}
+
+The cone of $f: X \rightarrow Y$ for $X,Y \in \D(\A)$ is not canonically
+defined. It is unique, but only up to a non-canonical isomorphism, because in
+order to construct the cone we had to pick complexes representing $X$ and $Y$.
+
+\begin{defn}
+  Let $\A, \mc{B}$ be categories. A functor $F: \D(\A) \rightarrow \D(\mc{B})$ is
+    called exact if it commutes with the shift functor and maps distinguished
+    triangles to distinguished triangles.
+\end{defn}
+
+\begin{defn}
+  $X \in \D(\A)$ is an $H^0$-complex if $H^i(X) = 0$ for $i \neq 0$.
+\end{defn}
+
+\begin{lem}
+  The inclusion $\A \rightinclusion \D(\A)$ induces an equivalence between $\A$
+  and the full subcategory of $H^0$ complexes.
+\end{lem}
+
+Let $X,Y \in \A$ then we can define $\Ext$ by $$\Ext^i(X,Y) =
+\Hom_{\D(\A)}(X^*,Y^*[i]).$$
+(Note that $\Hom_{\A}(X,Y) = \Hom_{\D(\A)}(X^*,Y^*))$. If $\A$ has enough
+projectives or injectives, then one can show that it is the same definition as
+before.
+
+\section{Another way of thinking about the derived category}
+It is not hard to prove that $\D(\A)$ exists and is unique, but not easy to
+understand what morphisms are.
+
+\begin{ex}
+  Suppose $\mc{C}$ is a category with one object $X$ and $\End X = A$, a monoid.
+  Let $S \rightinclusion A$ be a multiplicative subset, then $A[S^{-1}]$ is the
+  monoid consisting of words with letters $a \in A$ and $s^{-1}, s \in S$ with
+  equivalence relations $$\begin{cases} \cdots (a_1) (a_2) \cdots = \cdots
+    (a_1a_2) \cdots \\
+    \cdots s_1^{-1}s_2^{-1} \cdots = \cdots (s_1 s_2)^{-1} \cdots \\
+  \cdots s^{-1} s \cdots = \cdots = \cdots s s^{-1} \cdots \end{cases}$$
+  So it's hard to understand what morphisms are, but things are better if we
+  have ``the condition'', i.e.\ the class $S$ is \textit{localizable}.
+\end{ex}
+
+\begin{defn}
+  A multiplicative closed set $S$ is localizable if
+  \begin{itemize}
+    \item $\forall s: Z \rightarrow Y,
+  s \in S$ and $f: X \rightarrow Y$ there exists $t \in S$ and $g$ such that the
+  following diagrams are commutative
+
+  \image{lec13-comm1.png} i.e.\ $$s^{-1}f = g t^{-1}$$
+  \image{lec13-comm2.png} i.e.\ $$f s^{-1} = t^{-1} g$$
+  So a right fraction can be rewritten as a left fraction, and vice-versa, and
+\item  Let $f: X \rightarrow Y$ then $\exists s \in S$ such that $s f = s g $
+  if and only if $\exists t \in S$ with $$f t = gt$$ (this will be a condition
+  for $f$ to equal $g$ in the localization).
+  \end{itemize}
+\end{defn}
+
+If $S$ is localizable, then the localization $\mc{C}[S^{-1}]$ has a nice
+description: morphisms can be represented by \textit{roofs} (left or right)
+\image{lec13-roofs.png}
+
+Moreover, two diagrams
+\image{lec13-two-diagrams.png}
+define the same morphism if $\exists X'''$ and $r: X''' \rightarrow X'$, $h:
+X''' \rightarrow X''$, $r,h \in S$ such that the following diagram is
+commutative
+\image{lec13-equiv.png}
+i.e.\ to show that $f s^{-1} = gt^{-1}$, we find $r,h$ such that $$fr = gh, sr =
+th$$ then $$fs^{-1} = f r r^{-1} s^{-1} = g h r^{-1} s^{-1} = g h h^{-1}
+t^{-1} = g t ^{-1}$$
+
+\begin{prop}
+  If $\mc{S}$ is a localizable class, then $\mc{C}[\mc{S}^{-1}]$ is the category
+  with objects given by objects of $\mc{C}$ and morphisms given by roofs with
+  the equivalence given above.
+\end{prop}
+
 \end{document}

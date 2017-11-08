@@ -1,4 +1,125 @@
 \documentclass[etingof-dmod.tex]{subfiles}
 \begin{document}
-\section{section Plan}
+\section{The functors $\pi^!$,$\pi_*$, $\Du$ and $\boxtimes$}
+\begin{thm}
+  The functors $\pi^!$,$\pi_*$, $\Du$ and $\boxtimes$ preserve the derived
+  category of holonomic $\mc{D}$-modules.
+\end{thm}
+\begin{proof}
+  The theorem is clear for $\boxtimes$. For $\Du$ this is a local statement, so
+  it reduces to the affine case where we already know it. For $\pi: X
+  \rightarrow Y$, the case of $\pi^!$ reduces to the cases when both $X$ and $Y$
+  are affine, and again we already know it. It remains to show the property for
+  $\pi_*$. Any $\pi$ is a composition of a closed embedding, an open embedding
+  and a projection $$\P^N\times Y \rightarrow Y.$$ The case of a closed
+  embedding is local, so again reduces to the affine case. In the case of an open
+  embedding $$j : U \rightinclusion X$$ we may assume that $X$ is affine. Our
+  strategy will be to again reduce to the affine case; cover $U$ by affine open
+  sets$$U = \bigcup_{\alpha=1}^n U_{\alpha},$$ and consider the Cech complex
+  $$C_k = \bigoplus_{\{\alpha_1,
+  \ldots, \alpha_k\}} j_{\alpha_1,\ldots,\alpha_k *}
+  \restr{M}{U_{\alpha_1}\cap\cdots\cap U_{\alpha_k}}$$ then by definition $C$
+    represents $j_*(M)$. We know that $C_k$ are holonomic, so $C$ is holonomic,
+    i.e.\ $j_* M$ is holonomic. Now in the case of the projection $$\pi: \P^N
+    \times Y \rightarrow Y$$, we may assume that $Y$ is affine, and we already
+    know the statement for $\pi' : \A^N \times Y \rightarrow Y$, so we proceed
+    by induction. Let $M$ on $\P^N \times Y$ be holonomic, and $j: \A^N \times Y
+    \rightinclusion \P^N \times Y$, then we have an exact triangle $$M
+    \rightarrow j_*M \rightarrow N$$ where $N$ is supported on $\P^{N-1}\times
+    Y$, so we have $$\pi_* M \rightarrow \pi_* j_* M \rightarrow \pi_*
+    N.$$ Now $\pi_*N$ is holonomic by our induction hypothesis, and $\pi_* j_* M
+    = (\pi \circ j)_* M$ is holonomic by reduction to the affine case, so $\pi_*
+    M$ is holonomic, as desired.
+\end{proof}
+
+\begin{rmk}
+  Let $\pi: X \rightarrow \pt$ where $X$ is smooth of dimension $n$, then
+  $$H^i(\pi_*\O) = H^{i+n}(X,\C)$$ so by poincar\'e duality $$H^i(\pi_!\O) =
+  H^{-i}(\pi_*\O)^* = H^{n-i}(X,\C)^* = H_c^{n+i}(X,\C).$$ Therefore, $\pi_!$ is
+  called the direct image with compact support, and its right adjoint $\pi^!$ is
+  called inverse image with compact support. If instead we work on a singular
+  variety, instead of $\O$ we can take $\IC_X$, then we will get the
+  intersection cohomology $\IH^*$ (resp\. the intersection cohomology with
+  compact support $\IH_c^*$) with the appropriate shift.
+\end{rmk}
+
+\subsection{An example}
+  Let $X \rightinclusion \A^2$ be given by $xy = 0$, then $X = X_1 \cup X_2$
+  with $X_1 = \{x=0\}$ and $X_2 = \{y=0\}$. We have $$\IC_X = i_{1*}\O \oplus
+  i_{2*}\O$$ for $$i_j : X_j \rightinclusion X.$$ Note that this scenario
+  satisfies the required conditions. So $$\dim \IH^i(X) = \begin{cases} 2 &
+    \text{ if } i =
+    0 \\
+  0 & \text{otherwise} \end{cases}$$
+  So we see this cohomology theory is different from the ordinary cohomology.
+  \subsection{another example}
+ Let $\Gamma$ be a finite group and let $X$ be a smooth $\Gamma$-variety
+  such that $\Gamma$ acts on $X$ freely at the generic point. Assume that $Y = X /
+  \Gamma$ is a variety, then $\Gamma$ acts on $\pi_* \O_X$. Let $V
+  \rightinclusion Y$ be the open set of points coming from the locus of trivial
+  stabilizers
+  \begin{lem}
+    $$j_{!*} ( \restr{\pi_* \O_X}{V}) = \pi_* \O_X$$
+  \end{lem}
+  \begin{proof}
+    Let $\hat{j} : U \rightinclusion X$ where $U = \pi^{-1}(V)$. Since $\pi$ is a
+    finite morphism, it is proper, hence $$j_! ( \restr{\pi_* \O_X}{V}) = \pi_*
+    ( \hat{j}_!(\restr{\O_X}{U})$$
+      $$j_*( \restr{\pi_* \O_X}{V}) = \pi_*( \hat{j}_*
+      \restr{\O_X}{U})$$
+      so $$\Im(j_! (\pi_* \restr{\O_X}{V}) \rightarrow j_*(\pi_* \restr{O_X}{V})
+        = \pi_*(\Im(\hat{j}_! \restr{\O_X}{U} \rightarrow \hat{j}_*
+        \restr{\O_X}{U})) = \pi_*\O_X$$
+        since $X$ is smooth. This means that $$j_{!*}( \restr{\pi_*\O_X}{V}) =
+        \pi_*\O_X$$
+  \end{proof}
+
+  \begin{cor}
+    $$\IC_Y = (\pi_*\O_X)^{\Gamma}$$
+  \end{cor}
+  \begin{cor}
+    $$H^i(\IC_Y) = \IH^{i}(Y)$$ so $$H^{\dim X+i}(Y,\C) =
+    H^{\dim X+i}(X,\C)^{\Gamma}$$
+  \end{cor}
+
+  \subsection{another example}
+    Let $Y \rightinclusion \C^3$ be defined by $xy - z^2 = 0$, then $$Y = \C^2 /
+    {\Z/2\Z}$$ and so $$\IH^*(Y) = H^*(Y)$$ i.e.\ coincides with the usual
+    cohomology.
+
+  \subsection{another example}
+    Let $\pi: X \rightarrow Y$ be a morphism of irreducible algebraic varieties.
+    We say that $\pi$ is small if $$\codim \{y \in Y | \dim \pi^{-1}(y) \geq m\}
+    \geq 2m+1$$
+
+    \begin{prop}
+      Suppose $\pi : X \rightarrow Y$ is a small resolution of singularities,
+      then $$\pi_* \O_X  = \IC_Y$$ so $$\IH^*(Y) = H^*(X)$$
+    \end{prop}
+
+    \begin{ex}
+      Let $\lie{g}$ be a simple lie algebra, and $$\widetilde{\lie{g}} =
+      \{(x,\lie{b})
+      | x \in \lie{g}, x \in \lie{b}, \lie{b} \text{ a borel
+    subalgebra}\}$$ then we have a map $$\pi: \widetilde{\lie{g}} \rightarrow
+    \lie{g} \times_{\lie{h}/W} \lie{h}$$ given by $\pi(x,\lie{b}) = (x,\hat{x})$
+    where $\hat{x}$ is the image of $x$ under the canonical quotient
+    $$\lie{b}/[\lie{b},\lie{b}] = \lie{h}$$ i.e.\ the standard cartan. It is
+    known that $\pi$ is a small resolution called the \textit{Grothendieck
+    simultaneous resolution}, thus $$\IH^*(\lie{g}\times_{\lie{h}/W}\lie{h}) =
+    H^*(\widetilde{\lie{g}}) = H^*(G/B)$$
+    \end{ex}
+
+    \begin{ex}
+      $\lie{g} = \lie{sl}_2$, then $\lie{g}\times_{\lie{h}/W}\lie{h}$ is a
+      double cover of $\lie{g}$ branched over the nilpotent cone $xy + z^2 = 0$,
+      hence it is the surface $t^2 = xy + z^2$---a homogenous quadric $Q$ in
+      $\C^4$. Also, note that $\widetilde{g}$ in this case is the total space of
+      $\O(-1)\oplus\O(-1)$ as a bundle over $\P^1$. It follows that $$\IH^j(Q) =
+      \begin{cases} \C & \text{ if } j = 0 \text{ or } j=2\\
+      0 & \text{otherwise}\end{cases}$$ while $$H^j(Q) = \begin{cases} \C
+        &\text{ if } j = 0\\
+      0 & \text{otherwise}\end{cases}$$
+    \end{ex}
+
 \end{document}

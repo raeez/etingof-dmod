@@ -33,14 +33,18 @@
 \contentsline {part}{Part\ 17. \enspace \noindent Lecture 17: The derived category of holonomic $\mathcal {D}$-modules}{39}
 \contentsline {section}{\tocsection {}{17}{section Plan}}{40}
 \contentsline {part}{Part\ 18. \enspace \noindent Lecture 18: Functorial Yoga, 3}{41}
-\contentsline {section}{\tocsection {}{18}{section Plan}}{42}
-\contentsline {part}{Part\ 19. \enspace \noindent Lecture 19: $\mathcal {D}$-modules with regular singularities, 1}{43}
-\contentsline {section}{\tocsection {}{19}{section Plan}}{44}
-\contentsline {part}{Part\ 20. \enspace \noindent Lecture 20: $\mathcal {D}$-modules with regular singularities, 2}{45}
-\contentsline {section}{\tocsection {}{20}{More on the Riemann-Hilbert Map}}{46}
-\contentsline {section}{\tocsection {}{21}{Example 1: case of a complete curve}}{46}
-\contentsline {section}{\tocsection {}{22}{Example 2: the projective line minus four points}}{47}
-\contentsline {section}{\tocsection {}{23}{Holonomic $\mathcal {D}$-modules with $\textbf {RS}$ in higher dimensions}}{48}
-\contentsline {subsection}{\tocsubsection {}{23.1}{Constructible sheaves and complexes}}{48}
-\contentsline {subsection}{\tocsubsection {}{23.2}{De Rham Functor}}{48}
-\contentsline {subsection}{\tocsubsection {}{23.3}{Definitions concerning vector bundles with flat connection}}{49}
+\contentsline {section}{\tocsection {}{18}{The functors $\pi ^!$,$\pi _*$, $\PazoBB {D}$ and $\boxtimes $}}{42}
+\contentsline {subsection}{\tocsubsection {}{18.1}{An example}}{43}
+\contentsline {subsection}{\tocsubsection {}{18.2}{another example}}{43}
+\contentsline {subsection}{\tocsubsection {}{18.3}{another example}}{44}
+\contentsline {subsection}{\tocsubsection {}{18.4}{another example}}{44}
+\contentsline {part}{Part\ 19. \enspace \noindent Lecture 19: $\mathcal {D}$-modules with regular singularities, 1}{47}
+\contentsline {section}{\tocsection {}{19}{section Plan}}{48}
+\contentsline {part}{Part\ 20. \enspace \noindent Lecture 20: $\mathcal {D}$-modules with regular singularities, 2}{49}
+\contentsline {section}{\tocsection {}{20}{More on the Riemann-Hilbert Map}}{50}
+\contentsline {section}{\tocsection {}{21}{Example 1: case of a complete curve}}{50}
+\contentsline {section}{\tocsection {}{22}{Example 2: the projective line minus four points}}{51}
+\contentsline {section}{\tocsection {}{23}{Holonomic $\mathcal {D}$-modules with $\textbf {RS}$ in higher dimensions}}{52}
+\contentsline {subsection}{\tocsubsection {}{23.1}{Constructible sheaves and complexes}}{52}
+\contentsline {subsection}{\tocsubsection {}{23.2}{De Rham Functor}}{52}
+\contentsline {subsection}{\tocsubsection {}{23.3}{Definitions concerning vector bundles with flat connection}}{53}

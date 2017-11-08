@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorem Environments %%
+%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{remark}
+\newtheorem{rmk}[thm]{Remark}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exc}[thm]{Exercise}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{toclean}{\textsc{toclean}}
+
+\newcommand\image[1]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=.5]{#1}
+    \label{fig-#1}
+  \end{figure}
+}
+\newcommand\imageopt[3]{ % \imageopt #1-filename #2-scale #3-caption
+  \begin{figure}[H]
+    \centering
+    \ifstrequal{#2}{}{%if no scale provided
+      \includegraphics{#1}}{ % don't set the scale
+      }{\includegraphics[scale=#2]{#1}} % otherwise do
+    \label{fig:#1}
+    \ifstrequal{#3}{}{%if no caption provided
+      }{ % don't try to set one
+      }{\caption{#3}} % otherwise do
+  \end{figure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TODO learn correct usage of tikz
+%% tikz
+ \usepackage{tikz-cd}
+%% Functions
+%% \begin{tikzcd}[column sep= small,row sep=0ex]
+%%     M_f \colon \pi_1(S \smallsetminus \{y_1, \dots, y_n\}, y) \arrow[r]& \Bij(f^{-1}(y)) \\
+%%    \gamma \arrow[r, mapsto]                                   & M_f(\gamma) = \sigma_{\gamma}^{-1}
+%% \end{tikzcd}
+%%
+%% \begin{align*}
+%%   M_f \colon \pi_1(S \smallsetminus \{y_1, \dots, y_n\}, y) & \longrightarrow \Bij(f^{-1}(y)) \\
+%%   \gamma & \longmapsto M_f(\gamma) = \sigma_\gamma^{-1}
+%% \end{align*}
+%%
+%% Or this:\medskip
+%%
+%% Let $ S' =S \smallsetminus \{y_1, \dots, y_n\} $. Define
+%% $ \begin{aligned}[t]
+%% M_f \colon \pi_1(S', y) &\longrightarrow \Bij(f^{-1}(y)) \\
+%% \gamma &\longmapsto M_f(\gamma) = \sigma_\gamma^{-1}
+%% \end{aligned} $
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Markup Readability %%
+%%
+%% macros
+\newcommand\nc{\newcommand}
+\newcommand\rc{\renewcommand}
+
+%% nomenclature
+\newcommand\nm{\nomenclature}
+\newcommand\mathnm[2]{\nm[#1]{#2}}
+\newcommand\mathsc[1]{\text{\normalfont\scshape#1}}
+
+%% mathematics-symbols
+\newcommand\mc[1]{\mathcal{#1}}
+\newcommand\mbb[1]{\mathbb{#1}}
+\newcommand\mbf[1]{\mathbf{#1}}
+\newcommand\msc[1]{\mathsc{#1}}
+
+% mathematics-algebra extensions
+\nc\plb{\left[} \nc\prb{\right]}
+\nc\pllb{\plb\plb} \nc\prrb{\prb\prb}
+\nc\plp{\left(} \nc\pllp{\plp\plp}
+\nc\prp{\right)} \nc\prrp{\plp\plp}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Markup Readability %%
+%%
+%% macros
+% \newcommand\nc{\newcommand}
+% \newcommand\rc{\renewcommand}
+% \newcommand\nm{{\nomenclature}}
+%
+% %% common symbols
+% \newcommand\lb{\left[}  \newcommand\rb{\right]}  % [ ]
+% \newcommand\llb{\lb\lb}  \newcommand\rrb{\rb\rb} % [[ ]]
+%
+% \newcommand\lp{\left(}  \newcommand\rp{\right)} % ( )
+% \newcommand\llp{\lp\lp} \newcommand\rrp{\rp\rp} % (( ))
+%
+% \newcommand\twotuple[2]{\lp #1,#2\rp}   % TODO implement variable number of args
+% \newcommand\setpresent[2]{\{ #1 | #2\}} % TODO typeset correctly
+
+%\newcommand\nm{} % temporarily disable standard \nomenclature
+%\newcommand\mathnm[2]{\nm[#1]{}}
+
+% \newcommand\image[1]{
+%   \begin{figure}[H]\label{fig-#1}
+%     \centering
+%     \includegraphics[scale=.5]{#1}
+%   \end{figure}
+% }
+% \newcommand\imageopt[3]{ % \imageopt #1-filename #2-scale #3-caption
+%   \begin{figure}[H]
+%     \centering
+%     \ifstrequal{#2}{}{%if no scale provided
+%       \includegraphics{#1}}{ % don't set the scale
+%       }{\includegraphics[scale=#2]{#1}}\label{fig:#1}
+%     \ifstrequal{#3}{}{%if no caption provided
+%       }{ % don't try to set one
+%       }{\caption{#3}} % otherwise do
+%   \end{figure}}

@@ -1,0 +1,209 @@
+\documentclass[etingof-dmod.tex]{subfiles}
+\begin{document}
+\nc\D{\mathbf{D}}
+\nc\Rep{\textbf{Rep}}
+\nc\RS{\textbf{RS}}
+\nc\RH{\mathbf{RH}}
+\nc\Drs{\mbf{D}_{rs}}
+\nc\Dhol{\mbf{D}_{hol}}
+\nc\Dcon{\mbf{D}_{con}}
+\nc\Mdr{\mc{M}_{dR}}
+\nc\Mb{\mc{M}_{b}}
+\nc\Pic{\textbf{Pic}}
+\nc\Jac{\textbf{Jac}}
+\nc\C{\mathbf{C}}
+\nc\A{\mathbf{A}}
+\rc\O{\mc{O}}
+\rc\P{\mathbf{P}}
+\nc\CP{\C \mbf{P}}
+\nc\Tr{\textbf{Tr}}
+\nc\Sh{\textbf{Sh}}
+\nc\Du{\mbb{D}}
+\nc\Id{\mathbf{Id}}
+\nc\RHom{\mathbf{RHom}}
+\nc\dR{\mathbf{dR}}
+\nc\DR{\mathbf{DR}}
+%\nc\dim{\textbf{dim}}
+
+\section{More on the Riemann-Hilbert Map}
+  Last lecture we considered the Riemann Hilbert map
+
+\begin{tikzcd}
+  \RH: \parbox{6cm}{Algebraic vector bundles on $X$ with an $\RS$ flat connection} \arrow[r] & \Rep \pi_1(X)
+\end{tikzcd}
+
+which assigns to each bundle $(E,\nabla)$ the monodromy representation of
+$\nabla$. Note that both categories for fixed rank $r$ have a moduli space of
+objects which generically is an algebraic variety, and so in particular, a
+complex manifold. However, the map $\RH$ is not algebraic; it is only
+holomorphic.
+
+Let's consider two examples of what this map does.
+
+\section{Example 1: case of a complete curve}
+  Let $X$ be a projective curve of genus $g$, then the moduli space $\Mdr$ of line bundles
+  with connection looks as follows: we have a map
+  \begin{tikzcd}
+    \Mdr \arrow[r] & \Pic_{0}(X) = \Jac(X)
+  \end{tikzcd}
+  whose fiber is $\A^g$, an affine space bundle. Here $\A^g$ is a torsor over
+  $H^0(X,\Omega)$, and in particular is an algebraic variety of dimension $2g$.
+
+  On the other hand, the betti moduli space $\Mb$ is the moduli space of
+  representations of $\pi_1(X)$. Once we fix generators for $\pi_1(X)$: $$a_1,
+  \ldots, a_g, b_1, \ldots, b_g, \prod[a_i,b_i]=1,$$
+  then we can identify $$\Mb \simeq (\C^*)^{2g}.$$
+  Here the $\RH$ map is a holomorphic isomorphism $$\Mdr \simeq \Mb.$$ Clearly
+  it cannot be algebraic, since we have
+
+\begin{lem}
+  Any regular map $\C^* \rightarrow \Jac(X)$ is constant.
+\end{lem}
+\begin{proof}
+  The map extends to $$\CP^1 \rightarrow \Jac(X),$$ passage to the universal
+  cover then yields $$\CP^1 \rightarrow \C^n.$$ Now Liouville's theorem shows
+  this map is constant.
+\end{proof}
+
+In more detail, $\RH$ is inverse to a map $$f : \Mb \rightarrow \Mdr.$$ To
+construct $f$, let's construct $$\pi: (\C^*)^{2g} \rightarrow \Jac(X) =
+\Pic_{0}(X);$$ which is an affine space bundle. To define $f$, consider the
+$4g$-gon:
+\image{4g-gon.png}
+Given $$(\alpha_1,\beta_1, \ldots, \alpha_g,\beta_g) \in (\C^*)^{2g}$$ we
+consider the trivial line bundle on the polygon and glue
+together a line bundle on $X$ by using $\alpha_1$ along $a_1$, $\beta_1$ along $b_1$ etc.
+\section{Example 2: the projective line minus four points}
+Let $X = \P^1 - \{0,1,\lambda, \infty\}$ with $\lambda \neq 0,1,\infty$ and
+let's restrict to connections with trivial determinant. Now $\Mdr$ has an open
+set $\Mdr^{\circ}$ of connections which have first order poles on the trivial
+bundle. Let's also restrict further to fixed monodromy; i.e.\ $\Mdr^{\circ}$
+is the set of connections $$\nabla  = \partial  - \frac{a_0}{z} -
+\frac{a_1}{z-1} - \frac{a_{\lambda}}{z-\lambda}, \Tr(a_j)=0$$
+and let $a_{\infty} = -a_0 -a_1 - a_{\lambda}$. Denote by
+
+\begin{tikzcd}
+  \Mdr^{\circ}(\alpha_0,\alpha_1, \alpha_{\lambda}, \alpha_{\infty}) = \{
+    \nabla,  a_j \sim \begin{pmatrix} \alpha_j & 0 \\
+    0 & -\alpha_j \end{pmatrix}
+  \}
+\end{tikzcd} % \alpha_j \neq  0
+then letting $A_j \sim \begin{pmatrix} e^{2\pi i\alpha_j} & 0 \\
+    0 & e^{-2\pi i \alpha_j}\end{pmatrix}$ we see the map
+\begin{tikzcd}\RH: \Mb(\alpha_0,\alpha_1,\alpha_{\lambda},\alpha_{\infty})
+  \arrow[r] & \{ A_0,A_1,A_{\lambda},A_{\infty},\\
+  A_0A_1, A_{\lambda}A_{\infty} = 1\}
+\end{tikzcd}
+This map is highly transcendental.
+
+Namely, let $\mc{P} \in \Mb(\alpha_0,\alpha_1,\alpha_{\lambda}, \alpha_{\infty})$
+and consider the point $Q_{\lambda} = \RH_{\lambda}^{-1}(\mc{P}) \in
+\Mdr^{\circ}(\alpha_0,\alpha_1,\alpha_{\lambda}, \alpha_{\infty})$. This
+defines a flow on $\Mdr^{\circ}(\alpha_0,\alpha_1,\alpha_{\lambda},
+\alpha_{\infty})$ known as the Painlav\'e-6 flow.
+
+\section{Holonomic $\mc{D}$-modules with $\RS$ in higher dimensions}
+
+\subsection{Constructible sheaves and complexes}
+Let $X$ be a $\C$-algebraic variety. Denote by $X^{an}$ the corresponding
+analytic variety considered with the classical topology. Let $\C_X$ be the
+constant sheaf on $X^{an}$ and $\Sh(X^{an})$ the category of $\C_X$-modules
+i.e.\ sheaves of $\C$-vector spaces. The derived category of bounded $\C_X$-complexes
+will be denoted $\D(X^{an})$.
+
+  \begin{defn}
+    A $\C_X$-module $\mc{F}$ is constructible if there exists a stratification
+    $$X = \cup_i X_i$$ of $X$ by locally closed algebraic subvarieties such that
+    $\restr{\mc{F}}{X^{an}}$ is a locally constant complex of finite dimensional
+    vector spaces.
+  \end{defn}
+
+  \begin{rmk}
+    Note that a $\C_X$-complex is constructible if all of its cohomology sheaves
+    are constructible as $\C_X$-vector spaces.
+  \end{rmk}
+
+  The full subcategory of $\D(X^{an})$ consisting of constructible
+  complexes will be denoted by $\Dcon(X^{an})$.
+
+  Any morphism $\pi: X \rightarrow Y$ of algebraic varieties induces a
+  continuous map $\pi^{an} : X^{an} \rightarrow Y^{an}$, and we can consider the
+  functors
+
+  \begin{tikzcd}
+    \pi_!, \pi_*: & \D(X^{an}) \arrow[r] & \D(Y^{an}) \\
+    \pi^*, \pi^!: & \D(Y^{an}) \arrow[r] & \D(A^{an})
+  \end{tikzcd}
+
+  We also have
+
+  \begin{tikzcd}
+      \Du: & \D(X^{an}) \arrow[r] & \D(X^{an})
+  \end{tikzcd}
+
+We have
+\begin{thm}These functors preserve the subcategory of derived constructible
+  sheaves $\Dcon$, and on them we have
+    $$\Du^2 = \Id$$
+    $$\Du \pi^* \Du = \pi^!$$
+    $$\Du \pi_* \Du = \pi_!$$
+    and $\Du M = \RHom_{an}(M, \C_X)$.
+\end{thm}
+
+\subsection{De Rham Functor}
+Let $\O_X^{an}$ be the structure sheaf of $X^{an}$. We will assign to each
+$\O_X$-module $M$ the corresponding \textit{analytic sheaf} of
+$\O_X^{an}$-modules $M^{an}$, which is locally given by
+$$M^{an} = \O_{X}^{an} \otimes_{\O_X}M$$.
+
+This defines an exact functor $$an : M(\O_X) \rightarrow
+M(\O_{X^{an}})$$ and in particular an exact functor $$an: M(\mc{D}_X)
+\rightarrow M(\D_X^{an})$$, where $\mc{D}_X^{an}$ is the sheaf of analytic
+differential operators.
+
+\begin{defn}
+  The \textit{De Rham Functor}
+  $$\DR: \D^b(\mc{D}_X) \rightarrow \D^b(X^{an}) = \D^b(\Sh(X^{an}))$$
+  is $$\DR(M^{\circ}) = \Omega_X^{an} \otimes_{\mc{D}_X^{an}}
+  (M^{\circ})^{an}$$
+\end{defn}
+
+\begin{rmk}
+  Since $\dR(\mc{D}_X)$ is a locally projective resolution of $\Omega_X$ we have
+  $$\DR(M^{\circ}) = \dR(\mc{D}_X^{an}) \otimes_{\mc{D}_X^{an}}
+  (M^{\circ})^{an}[\dim X]$$
+\end{rmk}
+
+In particular, if $M$ is an $\O$-coherent $\mc{D}_X$-module corresponding to a vector
+bundle with a flat connection and $\mc{L} = M^{flat}$ is the local system  of
+flat sections, then $$\DR(M) = \mc{L}[dim X]$$ by Poincar\'e's lemma.
+
+Here is the main theorem about the connection between $\mc{D}$-modules and
+constructible sheaves:
+
+\begin{thm}
+  \begin{itemize}
+    \item $\DR(\Dhol(\mc{D}_X)) \subset \Dcon(X^{an})$, and on $\Dhol$ $\DR$
+      commutes with both tensor product and $\D$.
+    \item On the subcategory $\Drs$ the functor $\DR$ commutes with all of the
+      above functors
+    \item $\DR: \Drs(\mc{D}_X) \rightarrow \Dcon(X^{an})$ is an equivalence.
+  \end{itemize}
+\end{thm}
+\subsection{Definitions concerning vector bundles with flat connection}
+
+Let $M$ be a vector bundle on $X$ with a flat connection.
+\begin{defn}
+  $M$ lies in $\Drs$ if the restriction of $M$ to any curve has regular
+  singularities.
+\end{defn}
+\begin{defn}
+  An irreducible $M$ in $\Dhol$ has \textit{regular singularities} if
+  $M = j_{!*}L$ for $L$ a vector bundle with flat connection and regular
+  singularities.
+\end{defn}
+\begin{rmk}
+  An object $M \in \Dhol$ has regular singularities if and only if all
+  composition factors have regular singularities.
+\end{rmk}
+\end{document}
